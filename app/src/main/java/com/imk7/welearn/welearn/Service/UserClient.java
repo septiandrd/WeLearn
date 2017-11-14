@@ -28,7 +28,7 @@ public interface UserClient {
     @POST("signup")
     Call<SignUpResponse> signup(@Body User user);
 
-    @GET("getUser")
+    @GET("user")
     Call<GetUserResponse> getUser(@Query("token") String token);
 
 //    @GET("logout")

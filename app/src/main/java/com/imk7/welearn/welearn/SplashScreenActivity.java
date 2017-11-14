@@ -21,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class SplashScreenActivity extends AppCompatActivity {
 
     Retrofit.Builder builer = new Retrofit.Builder()
-            .baseUrl("http://192.168.100.7/")
+            .baseUrl("https://welearnapp.000webhostapp.com/")
             .addConverterFactory(GsonConverterFactory.create());
 
     Retrofit retrofit = builer.build();

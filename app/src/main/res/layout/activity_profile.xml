@@ -28,7 +28,7 @@
         <ImageView
             android:layout_width="200px"
             android:layout_height="200px"
-            android:src="@drawable/icon_msg"
+            app:srcCompat="@mipmap/ic_launcher_round"
             android:layout_marginTop="80px"
             android:layout_marginBottom="80px"/>
 
@@ -43,7 +43,8 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name"/>
+                android:text="Name"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/profile_name"
                 android:layout_width="0px"
@@ -65,7 +66,8 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Username"/>
+                android:text="Username"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/profile_username"
                 android:layout_width="0px"
@@ -87,7 +89,8 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Email"/>
+                android:text="Email"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/profile_email"
                 android:layout_width="0px"
@@ -110,7 +113,8 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Phone"/>
+                android:text="Phone"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/profile_phone"
                 android:layout_width="0px"
@@ -120,7 +124,166 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_height="1px"
+            android:background="@color/colorPrimaryDark">
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scoreboard"
+                android:layout_marginTop="50px"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="70px"
+                android:layout_marginBottom="50px"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modul 1"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="70px"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/score1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="score1"
+                    android:layout_marginRight="70px"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/progress_modul1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="70px"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modul 2"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="70px"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/score2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="score2"
+                    android:layout_marginRight="70px"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/progress_modul2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="70px"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modul 3"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="70px"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/score3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="score3"
+                    android:layout_marginRight="70px"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/progress_modul3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="70px"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modul 4"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="70px"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/score4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="score4"
+                    android:layout_marginRight="70px"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd" />
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/progress_modul4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="70px"
+                android:layout_marginBottom="70px"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -9,18 +9,22 @@ import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    Intent intent = getIntent();
-    String name = intent.getStringExtra("NAME");
-    String username = intent.getStringExtra("USERNAME");
-    String email = intent.getStringExtra("EMAIL");
-    String phone = intent.getStringExtra("PHONE");
-
     TextView txName, txUsername, txEmail, txPhone;
+    String name;
+    String username;
+    String email;
+    String phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        Intent intent = getIntent();
+        name = intent.getStringExtra("NAME");
+        username = intent.getStringExtra("USERNAME");
+        email = intent.getStringExtra("EMAIL");
+        phone = intent.getStringExtra("PHONE");
 
         txName = findViewById(R.id.profile_name);
         txUsername = findViewById(R.id.profile_username);
@@ -47,6 +51,10 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(getApplicationContext(),MainMenuActivity.class);
+        intent.putExtra("USERNAME",username);
+        intent.putExtra("NAME",name);
+        intent.putExtra("EMAIL",email);
+        intent.putExtra("PHONE",phone);
         startActivity(intent);
         finish();
     }

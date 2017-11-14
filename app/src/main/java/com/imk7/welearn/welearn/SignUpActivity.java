@@ -31,7 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
     ProgressDialog progress;
 
     Retrofit.Builder builer = new Retrofit.Builder()
-            .baseUrl("http://192.168.100.7/")
+            .baseUrl("https://welearnapp.000webhostapp.com/")
             .addConverterFactory(GsonConverterFactory.create());
 
 //    .baseUrl("https://welearnapp.000webhostapp.com/")

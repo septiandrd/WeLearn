@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
@@ -23,11 +22,10 @@ import com.imk7.welearn.welearn.Model.SaveSharedPreference;
 public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Intent intent = getIntent();
-    String username = intent.getStringExtra("USERNAME");
-    String name = intent.getStringExtra("NAME");
-    String email = intent.getStringExtra("EMAIL");
-    String phone = intent.getStringExtra("PHONE");
+    String username;
+    String name;
+    String email;
+    String phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +34,12 @@ public class MainMenuActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Intent intent = getIntent();
+        username = intent.getStringExtra("USERNAME");
+        name = intent.getStringExtra("NAME");
+        email = intent.getStringExtra("EMAIL");
+        phone = intent.getStringExtra("PHONE");
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -107,12 +111,7 @@ public class MainMenuActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            setTitle("Home");
-            MainMenuFragment mainMenuFragment = new MainMenuFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.fragment,mainMenuFragment).commit();
-            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-            fab.show();
+
         } else if (id == R.id.nav_profile) {
             Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
             intent.putExtra("USERNAME",username);

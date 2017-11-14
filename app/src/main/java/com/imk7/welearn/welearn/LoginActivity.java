@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText txUsername, txPassword;
 
     Retrofit.Builder builer = new Retrofit.Builder()
-            .baseUrl("http://192.168.100.7/")
+            .baseUrl("https://welearnapp.000webhostapp.com/")
             .addConverterFactory(GsonConverterFactory.create());
 
     Retrofit retrofit = builer.build();
