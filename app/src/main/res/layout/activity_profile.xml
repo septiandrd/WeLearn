@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.imk7.welearn.welearn.ProfileActivity"
+    android:background="@color/lightGrey">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white">
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50px"
+        android:layout_marginBottom="10px"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/layout_bg">
+
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:src="@drawable/icon_msg"
+            android:layout_marginTop="80px"
+            android:layout_marginBottom="80px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name"/>
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="Name"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="20px">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Username"/>
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="Username"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="20px">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Email"/>
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="Email"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="80px">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Phone"/>
+            <TextView
+                android:id="@+id/profile_phone"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="Phone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

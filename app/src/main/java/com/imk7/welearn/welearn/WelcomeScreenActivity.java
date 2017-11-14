@@ -6,8 +6,17 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
+import com.imk7.welearn.welearn.Model.GetUserResponse;
 import com.imk7.welearn.welearn.Model.SaveSharedPreference;
+import com.imk7.welearn.welearn.Service.UserClient;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WelcomeScreenActivity extends AppCompatActivity {
 
@@ -16,12 +25,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
 
-        SharedPreferences sp = getPreferences(Context.MODE_PRIVATE);
-        if(SaveSharedPreference.getUSERNAME(WelcomeScreenActivity.this).length()!=0) {
-            Intent intent = new Intent(getApplicationContext(),MainMenuActivity.class);
-            startActivity(intent);
-            finish();
-        }
+
     }
 
     public void SignUpOnClick(View v) {

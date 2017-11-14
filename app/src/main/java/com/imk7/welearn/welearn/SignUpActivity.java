@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.app.ProgressDialog;
 
+import com.imk7.welearn.welearn.Model.SaveSharedPreference;
 import com.imk7.welearn.welearn.Model.SignUpResponse;
 import com.imk7.welearn.welearn.Model.User;
 import com.imk7.welearn.welearn.Service.UserClient;
@@ -30,9 +31,10 @@ public class SignUpActivity extends AppCompatActivity {
     ProgressDialog progress;
 
     Retrofit.Builder builer = new Retrofit.Builder()
-            .baseUrl("https://welearnapp.000webhostapp.com/")
+            .baseUrl("http://192.168.100.7/")
             .addConverterFactory(GsonConverterFactory.create());
 
+//    .baseUrl("https://welearnapp.000webhostapp.com/")
     Retrofit retrofit = builer.build();
 
     UserClient userClient = retrofit.create(UserClient.class);
@@ -126,6 +128,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String code = response.body().getCode();
                 if(code.equals("SUCCESS")) {
                     progress.dismiss();
+                    SaveSharedPreference.setToken(SignUpActivity.this,txUsername.getText().toString());
                     Intent intent = new Intent(getApplicationContext(),MainMenuActivity.class);
                     startActivity(intent);
                     finish();

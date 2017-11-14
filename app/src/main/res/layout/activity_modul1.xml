@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.imk7.welearn.welearn.Modul1Activity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="160px"
+        android:layout_height="160px"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_msg"
+        android:scaleType="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightGrey">
+
+
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

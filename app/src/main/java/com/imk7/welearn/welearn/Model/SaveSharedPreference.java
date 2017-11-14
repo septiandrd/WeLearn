@@ -9,19 +9,19 @@ import android.preference.PreferenceManager;
  */
 
 public class SaveSharedPreference {
-    static final String USERNAME = "";
+    static final String TOKEN = "";
 
     static SharedPreferences getSharedPreferences(Context c) {
         return PreferenceManager.getDefaultSharedPreferences(c);
     }
 
-    public static void setUSERNAME(Context c, String Username) {
+    public static void setToken(Context c, String Username) {
         SharedPreferences.Editor editor = getSharedPreferences(c).edit();
-        editor.putString(USERNAME,Username);
+        editor.putString(TOKEN,Username);
         editor.commit();
     }
 
-    public static String getUSERNAME(Context c) {
-        return getSharedPreferences(c).getString(USERNAME,"");
+    public static String getToken(Context c) {
+        return getSharedPreferences(c).getString(TOKEN,"");
     }
 }

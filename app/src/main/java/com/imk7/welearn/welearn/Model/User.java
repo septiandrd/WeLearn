@@ -1,11 +1,32 @@
 package com.imk7.welearn.welearn.Model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by septiandrd on 10/11/17.
  */
 
 public class User {
-    String name, username, noHP, email,password,token;
+
+    @SerializedName("name")
+    @Expose
+    private String name;
+
+    @SerializedName("username")
+    @Expose
+    private String username;
+
+    @SerializedName("noHP")
+    @Expose
+    private String noHP;
+
+    @SerializedName("email")
+    @Expose
+    private String email;
+
+    private String password;
+    private String token;
 
     public User() {
     }
