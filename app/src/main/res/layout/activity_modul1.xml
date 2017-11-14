@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.imk7.welearn.welearn.Modul1Activity">
 
+
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="160px"
@@ -23,5 +25,13 @@
 
 
     </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white">
+    </android.support.v7.widget.Toolbar>
 
 </android.support.design.widget.CoordinatorLayout>
