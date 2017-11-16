@@ -160,6 +160,8 @@
                     android:text="Modul 1"
                     android:textStyle="bold"
                     android:layout_marginLeft="70px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:layout_weight="1"/>
 
                 <TextView
@@ -180,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70px"
                 android:layout_marginRight="70px"
-                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -193,6 +195,8 @@
                     android:text="Modul 2"
                     android:textStyle="bold"
                     android:layout_marginLeft="70px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:layout_weight="1"/>
 
                 <TextView
@@ -213,7 +217,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70px"
                 android:layout_marginRight="70px"
-                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -226,6 +230,8 @@
                     android:text="Modul 3"
                     android:textStyle="bold"
                     android:layout_marginLeft="70px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:layout_weight="1"/>
 
                 <TextView
@@ -246,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="70px"
                 android:layout_marginRight="70px"
-                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -259,6 +265,8 @@
                     android:text="Modul 4"
                     android:textStyle="bold"
                     android:layout_marginLeft="70px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:layout_weight="1"/>
 
                 <TextView
@@ -280,7 +288,7 @@
                 android:layout_marginLeft="70px"
                 android:layout_marginRight="70px"
                 android:layout_marginBottom="70px"
-                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
 
         </LinearLayout>
 

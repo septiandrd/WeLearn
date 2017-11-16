@@ -34,7 +34,6 @@ public class SignUpActivity extends AppCompatActivity {
             .baseUrl("https://welearnapp.000webhostapp.com/")
             .addConverterFactory(GsonConverterFactory.create());
 
-//    .baseUrl("https://welearnapp.000webhostapp.com/")
     Retrofit retrofit = builer.build();
 
     UserClient userClient = retrofit.create(UserClient.class);
@@ -112,7 +111,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void signUp() {
 
-        User user = new User();
+        final User user = new User();
         name = txNama1.getText().toString() + " " + txNama2.getText().toString();
         user.setName(name);
         user.setNoHP("0"+txPhone.getText().toString());
@@ -125,23 +124,26 @@ public class SignUpActivity extends AppCompatActivity {
         call.enqueue(new Callback<SignUpResponse>() {
             @Override
             public void onResponse(Call<SignUpResponse> call, Response<SignUpResponse> response) {
-                String code = response.body().getCode();
-                if(code.equals("SUCCESS")) {
+                if(response.isSuccessful()) {
                     progress.dismiss();
-                    SaveSharedPreference.setToken(SignUpActivity.this,txUsername.getText().toString());
+                    SaveSharedPreference.setToken(SignUpActivity.this,response.body().getToken());
                     Intent intent = new Intent(getApplicationContext(),MainMenuActivity.class);
+                    intent.putExtra("USERNAME",user.getUsername());
+                    intent.putExtra("NAME",user.getName());
+                    intent.putExtra("EMAIL",user.getEmail());
+                    intent.putExtra("PHONE",user.getNoHP());
                     startActivity(intent);
                     finish();
                 } else {
                     progress.dismiss();
-                    Toast.makeText(SignUpActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Connection Problem", Toast.LENGTH_SHORT).show();
                 }
 
             }
             @Override
             public void onFailure(Call<SignUpResponse> call, Throwable t) {
                 progress.dismiss();
-                Toast.makeText(SignUpActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUpActivity.this, "Connection Problem", Toast.LENGTH_SHORT).show();
             }
         });
 

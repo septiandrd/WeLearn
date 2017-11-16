@@ -68,6 +68,7 @@
             android:layout_marginRight="0.1dp">
 
             <TextView
+                android:id="@+id/btn_signup_welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -89,6 +90,7 @@
             android:layout_marginLeft="0.1dp">
 
             <TextView
+                android:id="@+id/btn_login_welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -97,8 +99,7 @@
                 android:textSize="20sp"
                 android:fontFamily="sans-serif-condensed"
                 android:textColor="@color/colorPrimary"
-                android:clickable="true"
-                android:onClick="LoginOnClick"/>
+                android:clickable="true" />
 
         </LinearLayout>
 

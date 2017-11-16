@@ -9,15 +9,16 @@ import android.preference.PreferenceManager;
  */
 
 public class SaveSharedPreference {
-    static final String TOKEN = "";
 
-    static SharedPreferences getSharedPreferences(Context c) {
+    private static final String TOKEN = "";
+
+    public static SharedPreferences getSharedPreferences(Context c) {
         return PreferenceManager.getDefaultSharedPreferences(c);
     }
 
-    public static void setToken(Context c, String Username) {
+    public static void setToken(Context c, String token) {
         SharedPreferences.Editor editor = getSharedPreferences(c).edit();
-        editor.putString(TOKEN,Username);
+        editor.putString(TOKEN,token);
         editor.commit();
     }
 

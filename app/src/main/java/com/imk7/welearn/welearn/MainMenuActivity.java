@@ -3,7 +3,6 @@ package com.imk7.welearn.welearn;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
@@ -15,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.imk7.welearn.welearn.Model.SaveSharedPreference;
@@ -22,10 +22,8 @@ import com.imk7.welearn.welearn.Model.SaveSharedPreference;
 public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    String username;
-    String name;
-    String email;
-    String phone;
+    String username,name,email,phone;
+    int modul1,modul2,modul3,modul4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +38,10 @@ public class MainMenuActivity extends AppCompatActivity
         name = intent.getStringExtra("NAME");
         email = intent.getStringExtra("EMAIL");
         phone = intent.getStringExtra("PHONE");
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        modul1 = intent.getIntExtra("MOD1",0);
+        modul2 = intent.getIntExtra("MOD2",0);
+        modul3 = intent.getIntExtra("MOD3",0);
+        modul4 = intent.getIntExtra("MOD4",0);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -71,6 +64,7 @@ public class MainMenuActivity extends AppCompatActivity
         MainMenuFragment mainMenuFragment = new MainMenuFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragment,mainMenuFragment).commit();
+
     }
 
     @Override
@@ -118,10 +112,15 @@ public class MainMenuActivity extends AppCompatActivity
             intent.putExtra("NAME",name);
             intent.putExtra("EMAIL",email);
             intent.putExtra("PHONE",phone);
+            intent.putExtra("MOD1",modul1);
+            intent.putExtra("MOD2",modul2);
+            intent.putExtra("MOD3",modul3);
+            intent.putExtra("MOD4",modul4);
             startActivity(intent);
             finish();
 
         } else if (id == R.id.nav_logout) {
+
             SaveSharedPreference.setToken(MainMenuActivity.this,"");
             AlertDialog alertDialog = new AlertDialog.Builder(this)
                     .setTitle("Confirm Logout")

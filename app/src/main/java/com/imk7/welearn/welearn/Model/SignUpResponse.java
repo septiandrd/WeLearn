@@ -9,19 +9,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class SignUpResponse {
 
-    @SerializedName("code")
+    @SerializedName("token")
     @Expose
-    private String code;
+    private String token;
 
-    @SerializedName("message")
-    @Expose
-    private String message;
-
-    public String getCode() {
-        return code;
-    }
-
-    public String getMessage() {
-        return message;
+    public String getToken() {
+        return token;
     }
 }

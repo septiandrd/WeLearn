@@ -6,21 +6,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeScreenActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity
-            android:name=".MainMenuActivity"
-            android:label="@string/title_activity_main_menu"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".ProfileActivity" />
         <activity
             android:name=".SplashScreenActivity"
+            android:configChanges="orientation"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="portrait">
@@ -30,7 +24,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Modul1Activity"></activity>
+        <activity
+            android:name=".WelcomeScreenActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUpActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainMenuActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Modul1Activity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Modul2Activity" />
+        <activity android:name=".Modul3Activity" />
+        <activity android:name=".Modul4Activity"></activity>
     </application>
 
 </manifest>

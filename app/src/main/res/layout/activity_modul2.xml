@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.imk7.welearn.welearn.Modul2Activity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="160px"
+        android:layout_height="160px"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_msg"
+        android:scaleType="center"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white">
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="PERCABANGAN"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Sebuah program tidak selamanya akan berjalan dengan mengikuti struktur berurutan, kadang-kadang kita perlu merubah urutan pelaksanaan program dan menghendaki agar pelaksanaan program meloncat ke baris tertentu. Peristiwa ini kadang disebut sebagai percabangan/pemilihan atau keputusan. Berikut beberapa kondisi percabangan :"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="1.	Percabangan 1 kondisi :-->
+
+      <!--Penulisan : if <kondisi> then <pernyataan>-->
+
+     <!--Jika <kondisi> bernilai benar maka pernyataan dikerjakan, sedangkan jika tidak, makapernyataan tidak dikerjakan dan proses langsung keluar dari percabangan"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="2.	Percabangan dengan 2 kondisi :-->
+
+      <!--Penulisan:-->
+
+      <!--if  <kondisi> then <pernyataan1>-->
+      <!--else <pernyataan2>-->
+
+        <!--Jika <kondisi> bernilai benar maka pernyataan1 dikerjakan. Sedangkan jika tidak (<kondisi> bernilai salah), maka pernyataan yang dikerjakan adalah pernyataan2. Berbeda dengan percabangan satu kondisi, pada percabangan dua kondisi ada dua pernyataan untuk dua keadaan kondisi, yaitu untuk <kondisi> yang bernilai benar dan <kondisi> yang bernilai salah"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="3.	Percabangan dengan 3 kondisi :-->
+
+       <!--Penulisan :-->
+
+       <!--If <kondisi1> then-->
+            <!--Pernyataan1-->
+       <!--else if <kondisi2> then-->
+            <!--Pernyataan2-->
+            <!--...-->
+       <!--else if <kondisi n> then-->
+            <!--Pernyataan(n)-->
+       <!--else-->
+            <!--Pernyataan(n)-->
+
+        <!--Mula-mula <kondisi1> dicek nilai kebenarannya. Jika benar, maka dikerjakan pernyataan1. Jika salah, maka dicek nilai kebenaran <kondisi2>. Jika <kondisi2> benar, maka dikerjakanpernyataan2. Jika tidak algoritma akan mengecek ke kondisi berikutnya dengan cara yang sama dengan yang sebelumnya. Terakhir, jika semua kondisi bernilai salah, maka pernyataan yang dikerjakan adalah Pernyataan(n+1)."-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Case Of"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Dalam fungsi yang berkaitan dengan logika adalah fungsi if, selain fungsi isi terdapat fungsi case of yaitu suatu ungkapan logika yang disebut selector dan sejumlah statemen yang diawali dengan suatu label permasalahan (case label) yang mempunyai tipe sama dengan selector. Statement yang mempunyai case label yang bernmilai sama dengan case label yang bernilai sama dengan nilai selector akan diproses sedang statemen yang lainnya tidak."
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="      Bentuk struktur case of :
+
+        Case Variabel Kondisi Of
+        case-label 1 : Statement 1;
+        case-label 2: Statement 2;
+        case-label 3: Statement 3;
+        case-label 4: Statement 4;
+        .....
+        ...
+        Case-label : Statement n ;
+        end;   {end dari case}"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

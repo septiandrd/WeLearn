@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.imk7.welearn.welearn.Modul1Activity">
 
-
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="160px"
@@ -17,15 +15,6 @@
         android:src="@drawable/icon_msg"
         android:scaleType="center"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/lightGrey">
-
-
-
-    </ScrollView>
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -33,5 +22,152 @@
         android:background="@color/colorPrimary"
         app:titleTextColor="@color/white">
     </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="VARIABEL, TIPE DATA DAN OPERATOR"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Variabel"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Pengertian variable adalah suatu pengenal (identifier) yang digunakan untuk mewakili suatu nilai tertentu di dalam proses program yang nilainya  bisa diubah-ubah sesuai kebutuhan."
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Jika anda masih bingung memahami variable, anggap atau bayangkan  saja variable itu semacam wadah atau tempat untuk menampung sesuatu, jika dikehidupan sehari-hari, ember bisa dianggap semacam variable untuk menampung air, gelas untuk menampung kopi atau susu dan sebagainya."
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="      Berikut ini aturan penamaan pada variabel :
+    1.	Maksimal 23 karakter.
+    2.	Hanya boleh terdiri dari karakter huruf abjad (A-Z, a-z),
+        Angka 0-9, dan garis bawah ( _ ).
+    3.	Tidak boleh sama dengan variabel lain.
+    4.	Tidak boleh sama dengan keyword ( kata
+         kunci ),seperti program, var, begin, end, if, case dan lain-
+         lain.
+    5.	Tidak boleh menggunakan simbol khusus antara lain :
+        $, ?,%, #, !, *, (, ), -, +, dsb." />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipe Data"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Pengertian dari Tipe data adalah jenis data atau nilai yang  yang dapat ditampung dan diolah oleh sebuah variabel. nama tipe data standar secara bawaan sudah didefinisikan oleh bahasa pemrograman sendiri, jadi namanya tinggal kita pilih sesuai dengan penggunaannya, tapi untuk kasus-kasus tertentu, jenis tipe data baru bisa kita buat jika memang dikehendaki."
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Jika anda masih bingung memahami apa maksud dari tipe data, tipe data itu jenis data yang dapat ditampung oleh variable, bayangkan saja jika di kehidupan sehari, gelas dapat menampung kopi atau teh, nah gelas itu bisa di ibaratkan nama variablenya (penampungnya), sedangkan teh atau kopi bisa diibaratkan tipe datanya dalam hal ini jenisnya adalah zat cair."
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="      Di dalam algoritma ataupun bahasa pemrograman Jenis-jenis tipe data dibagi kedalam beberapa kategori sebagai berikut:
+1.	Tipe data untuk mengolah angka : integer ( bilangan
+      bulat ), real (bilangan pecahan), dan lain-lain.
+2.	Tipe data untuk mengolah teks atau tulisan : String;
+3.	Tipe data boolean ( untuk menampung nilai benar atau
+      salah ) : boolean.
+4.	Tipe data konstanta ( bernilai tetap ) .
+5.	Tipe data record/ bentukan ( tipe data yang didefinisikan
+      oleh programmer itu sendiri )." />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="      Contoh untuk tipe data bentukan :-->
+       <!--Point = < x,y : integer >.-->
+       <!--P1 =  Point.-->
+    <!--Dari contoh diatas kita dapat melihat bahwa variabel P1 itu memiliki tipe data point, yang mana tipe data point telah kita definisikan sebelumnya."-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--/>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Operator"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="      Berikut ini adalah operator aritmatika yang digunakan pada algoritma pemrograman."
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_operator"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="100px"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

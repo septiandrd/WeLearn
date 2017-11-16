@@ -4,6 +4,8 @@ import android.support.v4.media.MediaMetadataCompat;
 
 import com.imk7.welearn.welearn.Model.GetUserResponse;
 import com.imk7.welearn.welearn.Model.LoginResponse;
+import com.imk7.welearn.welearn.Model.Score;
+import com.imk7.welearn.welearn.Model.ScoreResponse;
 import com.imk7.welearn.welearn.Model.SignUpResponse;
 import com.imk7.welearn.welearn.Model.User;
 
@@ -28,13 +30,15 @@ public interface UserClient {
     @POST("signup")
     Call<SignUpResponse> signup(@Body User user);
 
+    @POST("setScore")
+    Call<ResponseBody> setScore(@Body Score score);
+
     @GET("user")
     Call<GetUserResponse> getUser(@Query("token") String token);
 
-//    @GET("logout")
-//    Call<GetUserResponse> logout();
-//
-//    @GET("test")
-//    Call<ResponseBody> test();
+    @GET("getScore")
+    Call<Score> getScore(@Query("token") String token);
 
+    @GET("logout")
+    Call<GetUserResponse> logout();
 }
